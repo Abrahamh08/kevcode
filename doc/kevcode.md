@@ -20,6 +20,11 @@
         ...
     derp
 
+### goto, label
+
+    here be [label]
+    nyoom [label]
+
 ## Functions
 
 ### def, return
@@ -37,3 +42,41 @@
 ### assignment
 
     dis [var] be [val]
+
+## Operators
+
+### math
+
+    [val] prus [val]
+    [val] mainus [val]
+    [val] tiemz [val]
+    [val] splet [val]
+
+### boolean
+
+    naht [val]
+    [val] ekwalz [val]
+    [val] ress dan [val]
+    [val] moar dan [val]
+    [val] wit [val]
+    [val] oar [val]
+
+## Exceptions
+
+### try, catch
+
+    isit werk
+        ...
+    y u no werk
+        ...
+    derp
+
+### throw
+
+    halp [exception]
+
+## Misc
+
+### comments
+
+    fyi This is a comment
