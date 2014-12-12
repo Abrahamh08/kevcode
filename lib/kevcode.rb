@@ -1,11 +1,15 @@
 #!/usr/bin/ruby
 
 class KevCode
+    # because Ruby has no good way to call attr_reader on class vars
+    def self.version; [0, 0, 1]; end
+
     def initialize
     end
 
     def run code
         puts "run #{code}"
+        'return value'
     end
 end
 
@@ -35,7 +39,17 @@ if __FILE__ == $0
     if opts[:exec]
         k.run opts[:exec]
     elsif opts[:interactive]
-        # TODO REPL
+        puts "Welcome to the KevCode REPL! This is version #{KevCode.version * ?.}."
+        loop {
+            print '>>> '
+            # R
+            code = gets.chomp
+            # E
+            rtn = k.run code
+            # P
+            puts rtn
+            # L
+        }
     else
         file = ARGV.pop
         if file
