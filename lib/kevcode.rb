@@ -24,6 +24,11 @@ if __FILE__ == $0
         o.on('-i', '--interactive', 'Enter an interactive REPL instead') {|i|
             opts[:interactive] = i
         }
+
+        o.on('-h', '--help', 'Displays help') {
+            puts o
+            exit
+        }
     }.parse!
 
     k = KevCode.new
@@ -32,7 +37,12 @@ if __FILE__ == $0
     elsif opts[:interactive]
         # TODO REPL
     else
-        k.run STDIN.read
+        file = ARGV.pop
+        if file
+            k.run File.read(file)
+        else
+            k.run STDIN.read
+        end
     end
 
 end
