@@ -47,19 +47,20 @@
 
 ### math
 
-    [val] prus [val]
-    [val] mainus [val]
-    [val] tiemz [val]
-    [val] splet [val]
+    + [val] prus [val]
+    - [val] mainus [val]
+    * [val] tiemz [val]
+    / [val] splet [val]
+    % [val] rest of [val]
 
 ### boolean
 
-    naht [val]
-    [val] ekwalz [val]
-    [val] ress dan [val]
-    [val] moar dan [val]
-    [val] wit [val]
-    [val] oar [val]
+    !  naht [val]
+    == [val] ekwalz [val]
+    <  [val] ress dan [val]
+    >  [val] moar dan [val]
+    && [val] wit [val]
+    || [val] oar [val]
 
 ## Exceptions
 
