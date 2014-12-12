@@ -1,18 +1,32 @@
 #!/usr/bin/ruby
 
-require 'optparse'
+class KevCode
+    def initialize
+    end
 
-opts = {}
-OptionParser.new {|o|
-    o.banner = 'Usage: ./kevcode.rb [options]'
+    def run code
+        puts "run #{code}"
+    end
+end
 
-    o.on('-e', '--exec', 'Execute a string passed as an argument') {|e|
-        opts[:exec] = e
-    }
-}.parse!
+if __FILE__ == $0
 
-if opts[:exec]
-    # TODO
-else
-    # TODO
+    require 'optparse'
+
+    opts = {}
+    OptionParser.new {|o|
+        o.banner = 'Usage: ./kevcode.rb [options]'
+
+        o.on('-e', '--exec', 'Execute a string passed as an argument') {|e|
+            opts[:exec] = e
+        }
+    }.parse!
+
+    k = KevCode.new
+    if opts[:exec]
+        k.run opts[:exec]
+    else
+        k.run STDIN.read
+    end
+
 end
