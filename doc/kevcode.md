@@ -2,6 +2,28 @@
 
 (for the actual programming language, not the API / internal code)
 
+## Literals / types
+
+### number
+
+    42
+    1337.14159
+    -999
+
+### string
+
+    "hai"
+    "this \"is\" a quoted string"
+    "wow
+    many
+    lines"
+
+### function
+
+       def dis how to [func]
+    return     u can haz [val]
+       end derp
+
 ## Control Flow
 
 ### if, else, elsif
@@ -24,18 +46,6 @@
 
     here be [label]
     nyoom [label]
-
-## Functions
-
-### def, return
-
-    dis how to [func]
-        u can haz [val]
-    derp
-
-### execution
-
-    i wan haz [func] [args...]
 
 ## Variables
 
@@ -61,6 +71,10 @@
     >  [val] moar dan [val]
     && [val] wit [val]
     || [val] oar [val]
+
+### function
+
+    i wan haz [func] [args...]
 
 ## Exceptions
 
