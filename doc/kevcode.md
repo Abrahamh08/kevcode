@@ -19,3 +19,21 @@
     keep do wen [bool]
         ...
     derp
+
+## Functions
+
+### def, return
+
+    dis how to [func]
+        u can haz [val]
+    derp
+
+### execution
+
+    i wan haz [func] [args...]
+
+## Variables
+
+### assignment
+
+    dis [var] be [val]
