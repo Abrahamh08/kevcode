@@ -19,7 +19,12 @@ if __FILE__ == $0
 
     opts = {}
     OptionParser.new {|o|
-        o.banner = 'Usage: ./kevcode.rb [options]'
+        o.banner = 'Usage: ./kevcode.rb [filename or options]'
+
+        o.on('-h', '--help', 'Displays help') {
+            puts o
+            exit
+        }
 
         o.on('-e', '--exec code', 'Execute a string passed as an argument') {|e|
             opts[:exec] = e
@@ -27,11 +32,6 @@ if __FILE__ == $0
 
         o.on('-i', '--interactive', 'Enter an interactive REPL instead') {|i|
             opts[:interactive] = i
-        }
-
-        o.on('-h', '--help', 'Displays help') {
-            puts o
-            exit
         }
     }.parse!
 
@@ -51,6 +51,7 @@ if __FILE__ == $0
             # L
         }
     else
+        # read from file as arg, or STDIN otherwise
         file = ARGV.pop
         if file
             k.run File.read(file)
